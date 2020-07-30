@@ -9,13 +9,13 @@ been vetted. Use in production at your own risk.
 
 These _optional_ environmental variables may be used when spawning the container to configure the runner:
 
-|Variable|Default|Description|
-|--------|-------|-----------|
-|POLSERVER_UODATADIR|/MUL|Location of client data files. Client data files must be available if realm data is not present in `POLSERVER_REALMDIR` (see below).|
-|POLSERVER_SHARDDIR|/Shard|Location to unzip data. If this is a mounted volume, _all shard data_ will persist across container runs. It is **not recommended* to mount the Shard directory, as read-writes between host OS and docker containers are a heavy bottleneck in performance.|
-|POLSERVER_REALMDIR|/Realm|Location to store converted realm data. If this is a mounted volume, realm generation will be persisted across container runs.
-|POLSERVER_DISTROZIP|https://github.com/polserver/ModernDistro/archive/master.zip|The URL of distro zip. Can use a `file://` URI for locally available ZIPs in the container.|
-|POLSERVER_COREZIP|https://github.com/polserver/polserver/releases/download/NightlyRelease/Nightly-Linux-gcc.zip|The URL of polserver release zip. Can use a `file://` URI for locally available ZIPs in the container.|
+| Variable | Description | Default |
+|----------|-------------|---------|
+| POLSERVER_UODATADIR | Location of client data files. Client data files must be available if realm data is not present in `POLSERVER_REALMDIR` (see below). | /MUL |
+| POLSERVER_SHARDDIR | Location to unzip data. If this is a mounted volume, _all shard data_ will persist across container runs. It is **not recommended* to mount the Shard directory, as read-writes between host OS and docker containers are a heavy bottleneck in performance. | /Shard |
+| POLSERVER_REALMDIR | Location to store converted realm data. If this is a mounted volume, realm generation will be persisted across container runs.| /Realm |
+| POLSERVER_DISTROZIP | The URL of distro zip. Can use a `file://` URI for locally available ZIPs in the container. | https://github.com/polserver/ModernDistro/archive/master.zip |
+| POLSERVER_COREZIP | The URL of polserver release zip. Can use a `file://` URI for locally available ZIPs in the container.| https://github.com/polserver/polserver/releases/download/NightlyRelease/Nightly-Linux-gcc.zip |
 
 ## Prerequisites
 
