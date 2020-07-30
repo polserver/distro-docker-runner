@@ -9,6 +9,8 @@ RUN apt-get update && \
 
 COPY app.sh /app/app.sh
 
+RUN chmod +x /app/app.sh
+
 EXPOSE 5003
 
 ENTRYPOINT ["/app/app.sh"]
